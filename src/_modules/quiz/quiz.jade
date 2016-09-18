@@ -1,0 +1,26 @@
+mixin quiz()
+  .quiz.row
+    .stars
+    .next-star-counter.hidden
+      p 10
+    .col-xs-8.col-xs-offset-2
+      button.btn.next-question-button Next Question
+    .col-xs-8.col-xs-offset-2
+      button.btn.listen-again-button
+        i.fa.fa-2x.fa-volume-up
+        | Listen Again
+    .col-xs-8.col-xs-offset-2
+      .answer-section.hidden
+        h3 Your Answer:
+        button.btn.answer-button hoge
+        button.btn.answer-button hoge
+    .col-xs-8.col-xs-offset-2.bottom-of-page
+      h3.correct.emoji hoge
+      h3.incorrect.emoji hoge
+      .stats
+        //- i.fa.fa-2x.fa-refresh
+        h3.stat.attempts Questions Attempted:
+        //- i.fa.fa-2x.fa-circle-o
+        h3.stat.correct Correct Answers:
+        //- i.fa.fa-2x.fa-times
+        h3.stat.incorrect Incorrect Answers:
