@@ -54,7 +54,7 @@
   },
   "scripts": {
     "clean-deps": "rimraf node_modules",
-    "postinstall": "./node_modules/.bin/gulp build",
+    "postinstall": "./node_modules/.bin/gulp build"
   },
   "engines": {
     "node": ">=0.12.0"
