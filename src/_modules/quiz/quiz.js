@@ -157,13 +157,13 @@ export default class Quiz {
 
     function init() {
       updateStats();
-      $nextQuestionButton.click(() => {
+      $nextQuestionButton.on('click touchstart', () => {
         nextQuestion();
       });
-      $answerButtons.click(() => {
+      $answerButtons.on('click touchstart', () => {
         submitAnswer(event.target.value);
       })
-      $listenAgainButton.click(() => {
+      $listenAgainButton.on('click touchstart', () => {
         replayAudio();
       });
       [1,2,3,4,5,6,7,8,9].forEach(function(num) {
