@@ -1,7 +1,17 @@
 // quiz styles
 
+html {
+  min-height: 100%;
+  margin: 0;
+}
+
 body {
   background: url('../images/background.jpg') center top / cover no-repeat;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.no-padding {
+  padding: 0;
 }
 
 .inline {
@@ -14,6 +24,7 @@ body {
   .stars {
     position: absolute;
     left: 0;
+    top: 0;
     padding: 2rem;
     i {
       color: yellow;
@@ -23,24 +34,23 @@ body {
 
   .next-star-counter {
     position: absolute;
+    top: 0;
     left: 0;
-    padding: 2rem 3.5rem;
-    top: 5rem;
+    padding: 0.4rem 0.8rem;
     font-weight: 800;
     color: yellow;
     text-shadow: -2px 2px black;
   }
 
-  .bottom-of-page {
-    position: absolute;
-    bottom: 0;
-    text-align: left;
+  .stats-section {
+    text-align: center;
+    h3 {
+      display: inline-block;
+      margin: 0.8rem 0.6rem;
+      font-size: 1.6rem;
+    }
 
     .stats {
-      text-align: center;
-      background-color: white;
-      padding: 2rem;
-
       .stat {
         &.correct { color: green; }
         &.incorrect { color: red; }
@@ -48,9 +58,18 @@ body {
     }
   }
 
+  .title-section {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 2.4rem;
+  }
+
   .emoji {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
-    margin: 0 -15px;
+    margin: 0;
     padding: 2rem;
     display: none;
 
@@ -73,6 +92,8 @@ body {
   color: $text-color;
   @if $border-color {
     border: $border-thickness solid $border-color;
+  } @else {
+    border: $border-thickness solid $background-color;
   }
 
   &:hover {
@@ -86,8 +107,9 @@ body {
 
 .btn {
   font-weight: 800;
-  padding: 1rem 4rem;
-  margin: 2rem;
+  padding: 1rem 2.4rem;
+  margin-bottom: 30px;
+  width: 100%;
 
   &.next-question-button {
     text-transform: uppercase;
@@ -97,6 +119,7 @@ body {
 
   &.listen-again-button {
     font-size: 14px;
+    padding: .6rem 2.4rem 1.4rem;
     i {
       margin-right: 6px;
       position: relative;
@@ -107,10 +130,10 @@ body {
 
   &.answer-button {
     font-size: 32px;
-    &:first-of-type {
+    &.a {
       @include button(#f88, white, #d66);
     }
-    &:nth-of-type(2) {
+    &.b {
       @include button(#88f, white, #66d);
     }
   }

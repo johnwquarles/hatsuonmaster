@@ -1,22 +1,9 @@
 mixin quiz()
-  .quiz.row
+  .quiz
     .stars
     .next-star-counter.hidden
       p 10
-    .col-xs-8.col-xs-offset-2
-      button.btn.next-question-button Next Question
-    .col-xs-8.col-xs-offset-2
-      button.btn.listen-again-button
-        i.fa.fa-2x.fa-volume-up
-        | Listen Again
-    .col-xs-8.col-xs-offset-2
-      .answer-section.hidden
-        h3 Your Answer:
-        button.btn.answer-button hoge
-        button.btn.answer-button hoge
-    .col-xs-8.col-xs-offset-2.bottom-of-page
-      h3.correct.emoji hoge
-      h3.incorrect.emoji hoge
+    .stats-section.pull-right
       .stats
         //- i.fa.fa-2x.fa-refresh
         h3.stat.attempts Questions Attempted:
@@ -24,3 +11,22 @@ mixin quiz()
         h3.stat.correct Correct Answers:
         //- i.fa.fa-2x.fa-times
         h3.stat.incorrect Incorrect Answers:
+    .row
+      .col-xs-12.title-section
+        h1 Hatsuon Master
+      .col-xs-12.col-sm-8.col-sm-offset-2
+        .answer-section
+          .col-xs-12
+            button.btn.answer-button.a hoge
+          .col-xs-12
+            button.btn.answer-button.b hoge
+      .col-xs-12.col-sm-8.col-sm-offset-2
+        .col-xs-6
+          button.btn.listen-again-button.pull-left
+            i.fa.fa-2x.fa-volume-up
+            | Again
+        .col-xs-6
+          button.btn.next-question-button.pull-right Next
+
+    h3.correct.emoji hoge
+    h3.incorrect.emoji hoge

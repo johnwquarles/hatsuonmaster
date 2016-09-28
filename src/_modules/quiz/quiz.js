@@ -18,9 +18,9 @@ export default class Quiz {
     const $starCounterSection = $('.next-star-counter');
     const $starCounter = $('.next-star-counter p');
 
-    const correctDisplayText = 'Correct Answers: ';
-    const incorrectDisplayText = 'Incorrect Answers: ';
-    const attemptsDisplayText = 'Questions Attempted: ';
+    const correctDisplayText = 'Correct: ';
+    const incorrectDisplayText = 'Incorrect: ';
+    const attemptsDisplayText = 'Attempted: ';
 
     const $emojis = $('.emoji');
     const $correctEmoji = $('.correct.emoji');
@@ -183,6 +183,7 @@ export default class Quiz {
       keyboardJS.bind('enter', function(e) {
         nextQuestion();
       });
+      nextQuestion();
     }
 
     function replayAudio() {
