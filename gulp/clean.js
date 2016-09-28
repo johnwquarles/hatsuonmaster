@@ -9,6 +9,7 @@ export default function(gulp, plugins, args, config, taskTarget, templateTarget,
   // Clean
   gulp.task('clean', del.bind(null, [
     path.join(dirs.temporary),
-    path.join(dirs.destination)
+    path.join(dirs.destination),
+    path.join(dirs.templatesDestination)
   ]));
 }

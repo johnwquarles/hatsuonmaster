@@ -49,7 +49,7 @@ export default function(gulp, plugins, args, config, taskTarget, templateTarget,
     }
 
     return gulp.src([
-      path.join(dirs.source, '**/*.jade'),
+      path.join(dirs.source, 'templates/**/*.jade'),
       '!' + path.join(dirs.source, '{**/\_*,**/\_*/**}')
     ])
     .pipe(plugins.changed(dest))
