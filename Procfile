@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT hatsuonmaster.wsgi:application
+web: waitress-serve --port=$PORT hatsuonmaster.hatsuonmaster.wsgi:application
