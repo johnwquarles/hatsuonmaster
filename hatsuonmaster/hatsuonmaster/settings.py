@@ -19,7 +19,7 @@ DEBUG = True
 if environment and environment.lower() == 'prod':
     DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
