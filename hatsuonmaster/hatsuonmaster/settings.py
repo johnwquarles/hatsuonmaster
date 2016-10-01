@@ -1,6 +1,8 @@
 import os
 import dj_database_url
 
+environment = os.getenv('ENVIRONMENT', None)
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -14,6 +16,9 @@ SECRET_KEY = 'nnp^h-0j*6bqo@*p07(0rks4b$ixv6s)xd&9nxenxz9-80wpac'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+if environment and environment.lower() == 'prod':
+    DEBUG = False
+
 ALLOWED_HOSTS = []
 
 
@@ -25,12 +30,14 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'quiz',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -122,4 +129,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.CompressedManifestStaticFilesStorage'
