@@ -1,5 +1,6 @@
-$fa-font-path: '/static/fonts/font-awesome/';
-$icon-font-path: '/static/fonts/bootstrap/';
+// don't do this.
+$fa-font-path: 'https://hatsuonmaster.s3.amazonaws.com/fonts/font-awesome/';
+$icon-font-path: 'https://hatsuonmaster.s3.amazonaws.com/fonts/bootstrap/';
 
 // Deps
 @import 'node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
