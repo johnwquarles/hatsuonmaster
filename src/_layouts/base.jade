@@ -22,7 +22,7 @@ head
   meta(name='description', content= 'A new Yeogurt application')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   block stylesheets
-    link(rel='stylesheet', href= baseUrl + 'styles/main.css')
+    link(rel='stylesheet', href='{{ STATIC_URL }}styles/main.css')
     style: @import 'https://fonts.googleapis.com/css?family=Baloo+Bhai|Source+Sans+Pro';
 
 body
@@ -33,6 +33,6 @@ body
   block content
 
   block scripts
-    script(src= baseUrl + 'scripts/main.js')
+    script(src='{{ STATIC_URL }}scripts/main.js')
 
 </html>

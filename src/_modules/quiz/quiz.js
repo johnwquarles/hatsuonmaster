@@ -5,7 +5,7 @@ import keyboardJS from 'keyboardjs';
 
 export default class Quiz {
   constructor() {
-    const audioPath = './static/audio';
+    const audioPath = staticRoot + '/audio';
     const $correct = $('.stat.correct');
     const $incorrect = $('.stat.incorrect');
     const $attempts = $('.stat.attempts');
