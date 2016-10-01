@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT hatsuonmaster.hatsuonmaster.wsgi:application
+web: gunicorn hatsuonmaster.wsgi --pythonpath ./hatsuonmaster --log-file -
